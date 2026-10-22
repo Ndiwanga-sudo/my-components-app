@@ -1,0 +1,11 @@
+<div class="main-container">
+	<div class="editor-container editor-container_document-editor editor-container_include-fullscreen">
+		<div class="editor-container__menu-bar" #editorMenuBarElement></div>
+		<div class="editor-container__toolbar" #editorToolbarElement></div>
+		<div class="editor-container__editor-wrapper">
+			<div class="editor-container__editor">
+				<ckeditor [editor]="Editor" [config]="config" (ready)="onReady($event)" *ngIf="isLayoutReady" />
+			</div>
+		</div>
+	</div>
+</div>
